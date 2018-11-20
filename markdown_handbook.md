@@ -1,11 +1,5 @@
 [TOC]
 
-# Cmd Markdown 简明语法手册
-
-标签： Cmd-Markdown
-
----
-
 ### 1. 斜体和粗体
 
 使用 * 和 ** 表示斜体和粗体。
@@ -93,9 +87,6 @@
 ![我的头像](https://www.zybuluo.com/static/img/my_head.jpg)
 
 
-
-
-# Cmd Markdown 高阶语法手册
 
 ### 1. 内容目录
 
