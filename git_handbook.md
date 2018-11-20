@@ -1,3 +1,20 @@
+### 变量配置
+```
+git config --list    获取全局变量
+git config --global user.name "rasine"    设置用户名
+git config --global user.email "321fei@gmail.com"    设置邮箱
+
+ssh-keygen -t rsa -C "your_email@youremail.com"  生成密钥对
+cat ~/.ssh/id_rsa.pub    查看密钥对
+git remote -v    查看你当前的 remote url
+ssh -T git@github.com    验证下这个key是不是正常工作
+
+eval "$(ssh-agent -s)"     打开 ssh-agent
+ssh-add ~/.ssh/id_rsa      将私钥添加到 ssh-agent
+ssh-add -l                 查看所有的私钥对
+```
+
+
 ### 查看、添加、提交、删除、找回，重置修改文件
 ```
 git help <command> # 显示command的help
