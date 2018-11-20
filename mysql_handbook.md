@@ -44,13 +44,13 @@ GRANT ALL ON *.* TO 'pig'@'%';
 
 > 注意:用以上命令授权的用户不能给其它用户授权,如果想让该用户可以授权,用以下命令:
 
-```
+```mysql
 GRANT privileges ON databasename.tablename TO 'username'@'host' WITH GRANT OPTION; 
 ```
 
 ### 设置与更改用户密码 
 
-```
+```mysql
 当前用户与需要修改密码的用户不是同一用户
 SET PASSWORD FOR 'username'@'host' = PASSWORD('newpassword');
 
@@ -64,7 +64,7 @@ SET PASSWORD = PASSWORD("newpassword");
 
 说明: privilege, databasename, tablename - 同授权部分. 
 
-```
+```mysql
 REVOKE privilege ON databasename.tablename FROM 'username'@'host'; 
 
 例子: REVOKE SELECT ON *.* FROM 'pig'@'%';
@@ -72,17 +72,17 @@ REVOKE privilege ON databasename.tablename FROM 'username'@'host';
 
 ### 删除用户
 
-```
+```mysql
 命令: DROP USER 'username'@'host'; 
 ```
 
 ### 修改表名
-```
+```mysql
 alter table table_name rename table_new_name;
 ```
 
 ### 显示用户权限
-```
+```mysql
 查看MySQL用户权限：
 show grants for 你的用户
 比如：
@@ -93,7 +93,7 @@ select Host,User from user.user;
 
 
 ### 恢复数据
-```
+```mysql
 mysqlbinlog --no-defaults --database=ff5 --stop-datetime="2017-04-15 21:45:00" /var/lib/mysql/bak/mysql-bin.* > bak_bak_2130.sql
 mysqlbinlog --no-defaults --database=ff5 --start-datatime="2017-04-15 21:50:00" --stop-datetime="2017-04-15 21:55:00" /var/lib/mysql/bak/mysql-bin.* > bak_50_55.sql
 
@@ -152,7 +152,7 @@ Threads_connected 跟show processlist结果相同，表示当前连接数。准�
 +----------------------+-------+
 ```
 
-```
+```mysql
 查询日志目录：select @@log_error;
 设置校验强度：
 set global validate_password_policy=0;
